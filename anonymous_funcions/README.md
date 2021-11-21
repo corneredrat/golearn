@@ -16,7 +16,7 @@ func main() {
 	for _, movie := range moviesILike {
 		func() {
 			fmt.Printf("%v is one of my favorite movies; %v is my all time favorite movie.\n", movie, allTimeFavouriteMovie)
-			movie = "Some generic Marvel Movie"
+			movie = "A generic Marvel Movie"
 		}()
 		fmt.Printf("%v is a movie I would watch again\n", movie)
 	}
@@ -26,15 +26,15 @@ func main() {
 output
 ```
 Ulidavaru Kandanthe is one of my favorite movies; Raiders of the lost Ark is my all time favorite movie.
-Some generic Marvel Movie is a movie I would watch again
+A generic Marvel Movie is a movie I would watch again
 Kingdom of the Crystal Skull is one of my favorite movies; Raiders of the lost Ark is my all time favorite movie.
-Some generic Marvel Movie is a movie I would watch again
+A generic Marvel Movie is a movie I would watch again
 The Guest is one of my favorite movies; Raiders of the lost Ark is my all time favorite movie.
-Some generic Marvel Movie is a movie I would watch again
+A generic Marvel Movie is a movie I would watch again
 Shawshanl Redemption is one of my favorite movies; Raiders of the lost Ark is my all time favorite movie.
-Some generic Marvel Movie is a movie I would watch again
+A generic Marvel Movie is a movie I would watch again
 Shutter Island is one of my favorite movies; Raiders of the lost Ark is my all time favorite movie.
-Some generic Marvel Movie is a movie I would watch again
+A generic Marvel Movie is a movie I would watch again
 ```
 
 To avoid this, pass the scoped variables as parameter to the anonymous function
@@ -52,7 +52,7 @@ func main() {
 	for _, movie := range moviesILike {
 		func(myFavoriteMovie string) {
 			fmt.Printf("%v is one of my favorite movies; %v is my all time favorite movie.\n", myFavoriteMovie, allTimeFavouriteMovie)
-			myFavoriteMovie = "Some generic Marvel Movie"
+			myFavoriteMovie = "A generic Marvel Movie"
 		}(movie)
 		fmt.Printf("%v is a movie I would watch again\n", movie)
 	}

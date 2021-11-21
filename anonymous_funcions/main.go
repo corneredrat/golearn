@@ -11,7 +11,7 @@ func main() {
 	for _, movie := range moviesILike {
 		func(myFavoriteMovie string) {
 			fmt.Printf("%v is one of my favorite movies; %v is my all time favorite movie.\n", myFavoriteMovie, allTimeFavouriteMovie)
-			myFavoriteMovie = "Some generic Marvel Movie"
+			myFavoriteMovie = "A generic Marvel Movie"
 		}(movie)
 		fmt.Printf("%v is a movie I would watch again\n", movie)
 	}
